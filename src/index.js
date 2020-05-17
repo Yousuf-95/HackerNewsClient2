@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/app';
+import store from './store';
 // import * as serviceWorker from './serviceWorker';
 
 const stories = [
@@ -25,7 +26,7 @@ const stories = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <App stories = {stories} />
+    <App stories = {store.getState().storyState} onArchive = { () => {} } />
   </React.StrictMode>,
   document.getElementById('root')
 );
