@@ -1,10 +1,14 @@
 import React from 'react';
 import './app.css';
 import Stories from './stories';
+import SearchStories from './SearchStories';
 
-const App = ({stories}) =>
+const App = () =>
     <div className = "app">
-        <Stories stories = {stories} />
+        <div className = "interactions">
+            <SearchStories />
+        </div>
+        <Stories />
     </div>
 
 export default App;
